@@ -197,35 +197,3 @@ ul { list-style: none; }
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-/* Styles pour mobile uniquement */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* On affiche le bouton sur mobile */
-    }
-
-    .main-nav {
-        display: block; /* On réactive le nav */
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--bg-header);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border-glass);
-        padding: 2rem;
-        transform: translateY(-150%); /* Cache le menu en haut de l'écran */
-        transition: transform 0.3s ease;
-    }
-
-    /* Classe qui sera ajoutée en JavaScript pour ouvrir le menu */
-    .main-nav.active {
-        transform: translateY(0); 
-    }
-
-    .nav-list {
-        flex-direction: column; /* Aligne les liens verticalement */
-        gap: 1.5rem;
-        text-align: center;
-    }
-}

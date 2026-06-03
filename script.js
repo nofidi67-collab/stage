@@ -53,27 +53,3 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
-// 4. MENU HAMBURGER MOBILE
-const menuToggle = document.querySelector('.menu-toggle');
-const mainNav = document.querySelector('.main-nav');
-
-menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('active');
-    
-    // Change l'icône entre les barres "hamburger" et une croix "X"
-    const icon = menuToggle.querySelector('i');
-    if (mainNav.classList.contains('active')) {
-        icon.className = 'fas fa-times';
-    } else {
-        icon.className = 'fas fa-bars';
-    }
-});
-
-// Ferme le menu automatiquement quand on clique sur un lien
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-        menuToggle.querySelector('i').className = 'fas fa-bars';
-    });
-});
